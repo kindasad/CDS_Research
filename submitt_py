@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -J BM_3d            # job name
+#SBATCH -e BM_3d.%j.err     # error file name 
+#SBATCH -o BM_3d.%j.out     # output file name 
+#SBATCH -N 1                      # request 1 node
+#SBATCH -n 15                     # request all 20 cores 
+#SBATCH -p normal                 # designate queue 
+#SBATCH -t 12:00:00               # designate max run time 
+#SBATCH --mail-user=weishu.deng@mavs.uta.edu
+#SBATCH --mail-type=all   # email me when the job starts
+#cd /work/06206/deng451e/stampede2/APS
+#module load python3/3.7.0
+#python  3d_BM.py
